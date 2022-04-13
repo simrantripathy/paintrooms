@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+
+<div class="user">
+<img src="user.png" height="200px" alt="user">
+<form class="profile" enctype="multipart/form-data">
+    <h2>User profile</h2>
+    <label for="email">Username</label>
+    <input type="email" name="email" placeholder="<%= user.email %>">
+    <div class="email error"></div>
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="">
+    <div class="password error"></div>
+    <label for="Full Name">Full Name</label>
+    <input type="text" name="name" placeholder="Your name">
+    <label for="Artistic abilities">Artistic Abilities</label>
+    <input type="text" name="skill" placeholder="eg. beginner, intermediate, etc.">
+    <label class="file" for="image">Change image</label>
+    <input  class="file" type="file" name="image" placeholder="upload">
+    <div class="save">
+    <button class="button">Save</button>
+    </div>
+</form>
+</div>
+
+<ul>
+    <li><a href="/task">Tasks</a></li>
+    <li><a href="/courses">Courses</a></li>
+</ul>
+
+<%- include('partials/footer'); -%>

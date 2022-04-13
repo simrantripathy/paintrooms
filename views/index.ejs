@@ -1,0 +1,31 @@
+<%- include('partials/header'); -%>
+
+<div class="tasks-content">
+  <h2>All Tasks</h2>
+
+  <div class="task-list">
+
+  <% if (tasks.length > 0) { %>
+    <% tasks.forEach(task => { %>
+      <a class="single" href="/tasks/<%= task._id %>">
+        <h3 class="description"><%= task.description %></h3>
+        <p class="completed"><%= task.completed %></p>
+        <p class="deadline"><%= task.deadline %></p>
+      </a>
+    <% }) %>
+  <% } else { %>
+    <p>It's empty in here. Create a new task!</p>
+  <% } %>
+  
+  </div>
+</div>
+
+<div class="create">
+    <ul>
+      <li><a href="/tasks/create">New Task</a></li>
+    </ul>
+</div>
+
+    </div>
+
+<%- include('partials/footer'); -%>

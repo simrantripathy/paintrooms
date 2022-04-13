@@ -1,0 +1,15 @@
+<%- include('partials/header'); -%>
+
+<div class="create-task">
+    <form action="/tasks" method="POST">
+      <label for="description">Task description:</label>
+      <input type="text" id="title" name="description" required>
+      <label for="completed">Completed:</label>
+      <input type="text" id="completed" name="completed" required>
+      <label for="deadline">Deadline:</label>
+      <input type="date" id="deadline" name="deadline" required>
+      <button class="button">Submit</button>
+    </form>
+  </div>
+
+<%- include('partials/footer'); -%>
